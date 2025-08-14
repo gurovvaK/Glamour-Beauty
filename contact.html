@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glamour Beauty | Контакты</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Шапка -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <i class="fas fa-spa"></i> Glamour Beauty
+        </a>
+        <nav>
+  <ul class="nav-menu">
+    <li class="nav-item"><a href="index.html" class="nav-link">Главная</a></li>
+    <li class="nav-item"><a href="makeup.html" class="nav-link">Макияж</a></li>
+    <li class="nav-item"><a href="uhod.html" class="nav-link">Уход</a></li>
+    <li class="nav-item"><a href="about.html" class="nav-link">Обо мне</a></li>
+    <li class="nav-item"><a href="contact.html" class="nav-link">Контакты</a></li>
+  </ul>
+</nav>
+
+<div class="header-social">
+  <a href="https://instagram.com/gurovva_k" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://tiktok.com/@K_gurovva" target="_blank"><i class="fab fa-tiktok"></i></a>
+  <a href="https://t.me/gurovva_k" target="_blank"><i class="fab fa-telegram"></i></a>
+</div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" style="background-image: url('images/wdtnjxrb.jpg');">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">Свяжитесь со мной</h1>
+        <p class="hero-text">Напишите мне в удобной для вас форме</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контактная форма -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Форма обратной связи</h2>
+        <p>Заполните поля ниже, и я свяжусь с вами в ближайшее время</p>
+      </div>
+
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Имя</label>
+          <input type="text" id="name" placeholder="Ваше имя" required>
+        </div>
+        <div class="form-group">
+          <label for="telegram">Телеграм</label>
+          <input type="text" id="telegram" placeholder="@username" required>
+        </div>
+        <div class="form-group">
+          <label for="instagram">Инстаграм</label>
+          <input type="text" id="instagram" placeholder="@username" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Сообщение</label>
+          <textarea id="message" placeholder="Ваше сообщение" required></textarea>
+        </div>
+        <button type="submit" class="btn">Отправить</button>
+      </form>
+
+      <!-- Соцсети -->
+      <div class="contact-info" style="margin-top: 40px; text-align: center;">
+        <h3>Мои соцсети</h3>
+        <div class="social-links" style="justify-content: center; margin-top: 15px;">
+          <a href="https://instagram.com/gurovva_k" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="https://t.me/gurovva_k" target="_blank" class="social-link"><i class="fab fa-telegram"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Подвал -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <div class="footer-logo"><i class="fas fa-spa"></i> Glamour Beauty</div>
+          <p>Блог о красоте, макияже и уходе за собой. Советы от профессионалов индустрии красоты.</p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-vk"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h3>Разделы</h3>
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="makeup.html">Макияж</a></li>
+            <li><a href="uhod.html">Уход</a></li>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h3>Популярные темы</h3>
+          <ul>
+            <li><a href="#">Уход за кожей</a></li>
+            <li><a href="#">Макияж глаз</a></li>
+            <li><a href="#">Уход за волосами</a></li>
+            <li><a href="#">Средства для макияжа</a></li>
+            <li><a href="#">Бьюти-советы</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© 2023 Glamour Beauty. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', function () {
+      const header = document.querySelector('.header');
+      header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+      const linkPage = link.getAttribute('href');
+      if (currentPage === linkPage) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  </script>
+  <script>
+document.querySelector('.contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById('name').value;
+  const telegramUser = document.getElementById('telegram').value;
+  const instagramUser = document.getElementById('instagram').value;
+  const message = document.getElementById('message').value;
+
+  const token = "8454534573:AAEwgc_aeuY53WoBDE4kfW9OLGb2a6Fon_c";
+  const chatId = "6914302512";
+  const text = `📩 Новая заявка с сайта:
+  👤 Имя: ${name}
+  💬 Telegram: ${telegramUser}
+  📷 Instagram: ${instagramUser}
+  ✏️ Сообщение: ${message}`;
+
+  fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      chat_id: chatId,
+      text: text,
+      parse_mode: "HTML"
+    })
+  })
+  .then(response => {
+    if (response.ok) {
+      alert("Заявка отправлена! Я свяжусь с вами в Telegram.");
+      document.querySelector('.contact-form').reset();
+    } else {
+      alert("Ошибка при отправке. Попробуйте позже.");
+    }
+  })
+  .catch(error => {
+    console.error("Ошибка:", error);
+    alert("Ошибка при отправке. Попробуйте позже.");
+  });
+});
+</script>
+
+</body>
+</html>

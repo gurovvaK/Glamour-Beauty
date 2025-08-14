@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glamour Beauty | О нас</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Шапка -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <i class="fas fa-spa"></i> Glamour Beauty
+        </a>
+        <nav>
+          <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link">Главная</a></li>
+            <li class="nav-item"><a href="makeup.html" class="nav-link">Макияж</a></li>
+            <li class="nav-item"><a href="uhod.html" class="nav-link">Уход</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link active">Обо мне</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="header-social">
+          <a href="https://instagram.com/gurovva_k" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://tiktok.com/@K_gurovva" target="_blank"><i class="fab fa-tiktok"></i></a>
+          <a href="https://t.me/gurovva_k" target="_blank"><i class="fab fa-telegram"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" style="background-image: url('images/i.jpeg');">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">Обо мне</h1>
+        <p class="hero-text">8 лет в индустрии красоты — макияж, вдохновение и полезные советы</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- О нас -->
+  <section class="section">
+    <div class="container">
+      <div class="about-content" style="max-width: 100%;">
+        <div class="about-img" style="flex: 0 0 45%;">
+          <img src="images/мое.jpeg" alt="Фото Кристины">
+        </div>
+        <div class="about-text" style="flex: 0 0 55%;">
+          <h2>Привет, я Кристина!</h2>
+          <p>Я — бьюти-блогер и визажист с многолетним опытом. 
+             Моя специализация — макияж для любых случаев: от лёгкого повседневного до эффектного вечернего образа. 
+             Я помогаю девушкам раскрывать свою красоту и находить собственный стиль.</p>
+          <p>За годы работы я получила профильное образование, прошла десятки курсов у ведущих мастеров 
+             и сотрудничала с известными косметическими брендами. Также принимала участие в конкурсах и творческих проектах.</p>
+          <p>В моём блоге я делюсь честными обзорами, пошаговыми уроками и личными лайфхаками. 
+             Для меня макияж — это не только про красоту, но и про уверенность в себе. 
+             Я всегда придерживаюсь принципа: подчеркнуть достоинства, а не скрывать недостатки.</p>
+          <p>А ещё в моём блоге можно узнать много нового об уходе за собой, ведь это так важно!</p>
+
+          <!-- Кнопка под текстом -->
+          <a href="contact.html" class="btn">Связаться со мной</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Подвал -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <div class="footer-logo"><i class="fas fa-spa"></i> Glamour Beauty</div>
+          <p>Блог о красоте, макияже и уходе за собой. Советы от профессионалов индустрии красоты.</p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-vk"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h3>Разделы</h3>
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="makeup.html">Макияж</a></li>
+            <li><a href="uhod.html">Уход</a></li>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h3>Популярные темы</h3>
+          <ul>
+            <li><a href="#">Уход за кожей</a></li>
+            <li><a href="#">Макияж глаз</a></li>
+            <li><a href="#">Уход за волосами</a></li>
+            <li><a href="#">Средства для макияжа</a></li>
+            <li><a href="#">Бьюти-советы</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© 2023 Glamour Beauty. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', function () {
+      const header = document.querySelector('.header');
+      header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+      const linkPage = link.getAttribute('href');
+      if (currentPage === linkPage) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>
